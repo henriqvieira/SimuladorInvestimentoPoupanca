@@ -1,5 +1,6 @@
 import Driver.DriverWeb;
 import Site.ActionHome;
+import Util.PrintEvidencia;
 import cucumber.api.java.pt.*;
 import org.junit.FixMethodOrder;
 import org.junit.runners.MethodSorters;
@@ -42,11 +43,13 @@ public class TestSite_SimuladorPoupanca {
             case "PreencherTodosValores":
                 DriverWeb.timeS(1500);
                 assertEquals("R$ 3.276", home.getValorResultado().getText());
+                PrintEvidencia.PrintTela();
                 DriverWeb.Quit();
                 break;
             case "ValorMenorQueOMinimo":
                 assertEquals("Valor mínimo de 20.00", home.getValorAplicarErro().getText());
                 assertEquals("Valor mínimo de 20.00", home.getValorInvestirErro().getText());
+                PrintEvidencia.PrintTela();
                 DriverWeb.Quit();
                 break;
         }

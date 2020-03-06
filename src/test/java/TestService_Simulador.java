@@ -1,4 +1,5 @@
 import Driver.DriverRest;
+import Util.PrintEvidencia;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
@@ -27,6 +28,7 @@ public class TestService_Simulador {
                         .body("id", equalTo(1))
                         .body("meses", contains("112", "124", "136", "148"))
                         .body("valor", contains("2.802", "3.174", "3.564", "3.971"));
+                PrintEvidencia.Print("Resultado: \n"+rest.getResponse().body().print());
                 break;
         }
     }

@@ -44,6 +44,9 @@ formatter.background({
   "description": "",
   "keyword": "Contexto"
 });
+formatter.before({
+  "status": "passed"
+});
 formatter.step({
   "name": "que acessei o servico",
   "keyword": "Dado "
@@ -81,6 +84,7 @@ formatter.step({
 formatter.match({
   "location": "TestService_Simulador.verifiquei_servico(String)"
 });
+formatter.write("Resultado: \n{\"id\":1,\"meses\":[\"112\",\"124\",\"136\",\"148\"],\"valor\":[\"2.802\",\"3.174\",\"3.564\",\"3.971\"]}");
 formatter.result({
   "status": "passed"
 });
@@ -135,6 +139,9 @@ formatter.background({
   "description": "",
   "keyword": "Contexto"
 });
+formatter.before({
+  "status": "passed"
+});
 formatter.step({
   "name": "que acessei o Site Sicredi",
   "keyword": "Dado "
@@ -172,6 +179,7 @@ formatter.step({
 formatter.match({
   "location": "TestSite_SimuladorPoupanca.verifiquei_simulacao(String)"
 });
+formatter.embedding("image/png", "embedded0.png", null);
 formatter.result({
   "status": "passed"
 });
@@ -179,6 +187,9 @@ formatter.background({
   "name": "",
   "description": "",
   "keyword": "Contexto"
+});
+formatter.before({
+  "status": "passed"
 });
 formatter.step({
   "name": "que acessei o Site Sicredi",
@@ -217,6 +228,7 @@ formatter.step({
 formatter.match({
   "location": "TestSite_SimuladorPoupanca.verifiquei_simulacao(String)"
 });
+formatter.embedding("image/png", "embedded1.png", null);
 formatter.result({
   "status": "passed"
 });

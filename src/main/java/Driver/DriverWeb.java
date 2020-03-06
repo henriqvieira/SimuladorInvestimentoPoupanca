@@ -20,8 +20,9 @@ public class DriverWeb {
         System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver.exe");
         setDriver(new ChromeDriver());
         setWait(new WebDriverWait(driver, 40));
-        getDriver().manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-        getDriver().manage().timeouts().implicitlyWait(12L, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().pageLoadTimeout(55, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().implicitlyWait(13L, TimeUnit.SECONDS);
+        getDriver().manage().window().maximize();
         getDriver().get("https://www.sicredi.com.br/html/ferramenta/simulador-investimento-poupanca/");
     }
     public static void Quit(){ driver.quit(); }
